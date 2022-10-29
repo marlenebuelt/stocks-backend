@@ -1,13 +1,13 @@
 package de.stockexchange.stocks.web.api;
 
-public class ShareCreateRequest {
+public class ShareManipulationRequest {
     private String wkn;
     private String name;
     private double stocksPrice;
     private boolean buy;
 
 
-    public ShareCreateRequest(String wkn, String name, double stocksPrice, boolean buy) {
+    public ShareManipulationRequest(String wkn, String name, double stocksPrice, boolean buy) {
         this.wkn = wkn;
         this.name = name;
         this.stocksPrice = stocksPrice;
