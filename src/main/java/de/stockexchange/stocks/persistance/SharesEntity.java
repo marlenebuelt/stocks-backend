@@ -1,8 +1,6 @@
 package de.stockexchange.stocks.persistance;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity(name = "shares")
@@ -17,7 +15,7 @@ public class SharesEntity {
     private String name;
     @Column(name = "stocksPrice")
     private BigDecimal stocksPrice;
-    @Column(name = "buy", nullable = false)
+    @Column(name = "buy")
     private boolean buy;
 
     public SharesEntity(String wkn, String name, BigDecimal stocksPrice, boolean buy) {
