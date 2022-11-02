@@ -1,18 +1,21 @@
 package de.stockexchange.stocks.web.api;
 
+import java.math.BigDecimal;
+
 public class ShareManipulationRequest {
     private String wkn;
     private String name;
-    private double stocksPrice;
+    private BigDecimal stocksPrice;
     private boolean buy;
 
 
-    public ShareManipulationRequest(String wkn, String name, double stocksPrice, boolean buy) {
+    public ShareManipulationRequest(String wkn, String name, BigDecimal stocksPrice, boolean buy) {
         this.wkn = wkn;
         this.name = name;
         this.stocksPrice = stocksPrice;
         this.buy = buy;
     }
+
 
     public String getWkn() {
         return wkn;
@@ -30,11 +33,11 @@ public class ShareManipulationRequest {
         this.name = name;
     }
 
-    public double getStocksPrice() {
+    public BigDecimal getStocksPrice() {
         return stocksPrice;
     }
 
-    public void setStocksPrice(double stocksPrice) {
+    public void setStocksPrice(BigDecimal stocksPrice) {
         this.stocksPrice = stocksPrice;
     }
 

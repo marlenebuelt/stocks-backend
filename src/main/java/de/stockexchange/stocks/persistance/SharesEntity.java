@@ -3,21 +3,24 @@ package de.stockexchange.stocks.persistance;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.math.BigDecimal;
 
 @Entity(name = "shares")
 public class SharesEntity {
     //    Spalten in der Tabelle
     @Id
+    @Column(name = "id", nullable = false)
+    private long id;
     @Column(name = "wkn", nullable = false)
     private String wkn;
     @Column(name = "name")
     private String name;
     @Column(name = "stocksPrice")
-    private double stocksPrice;
+    private BigDecimal stocksPrice;
     @Column(name = "buy", nullable = false)
     private boolean buy;
 
-    public SharesEntity(String wkn, String name, double stocksPrice, boolean buy) {
+    public SharesEntity(String wkn, String name, BigDecimal stocksPrice, boolean buy) {
         this.wkn = wkn;
         this.name = name;
         this.stocksPrice = stocksPrice;
@@ -25,6 +28,10 @@ public class SharesEntity {
     }
 
     protected SharesEntity(){}
+
+    public long getId() {
+        return id;
+    }
 
     public String getWkn() {
         return wkn;
@@ -42,11 +49,11 @@ public class SharesEntity {
         this.name = name;
     }
 
-    public double getStocksPrice() {
+    public BigDecimal getStocksPrice() {
         return stocksPrice;
     }
 
-    public void setStocksPrice(double stocksPrice) {
+    public void setStocksPrice(BigDecimal stocksPrice) {
         this.stocksPrice = stocksPrice;
     }
 
