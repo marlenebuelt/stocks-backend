@@ -1,4 +1,4 @@
-package de.stockexchange.stocks;
+package de.stockexchange.stocks.service;
 
 import de.stockexchange.stocks.persistance.SharesEntity;
 import de.stockexchange.stocks.persistance.SharesRepository;
@@ -12,25 +12,28 @@ import java.util.stream.Collectors;
 @Service
 public class SharesService {
     private final SharesRepository sharesRepository;
-
-    public SharesService(SharesRepository sharesRepository) {
+    private final SharesTransformer sharesTransformer;
+    public SharesService(SharesRepository sharesRepository, SharesTransformer sharesTransformer) {
         this.sharesRepository = sharesRepository;
+        this.sharesTransformer = sharesTransformer;
     }
 
     public List<Share> findAll() {
         List<SharesEntity> shares = sharesRepository.findAll();
-        return shares.stream().map(this::transformEntity).collect(Collectors.toList());
+        return shares.stream()
+                .map(sharesTransformer::transformEntity)
+                .collect(Collectors.toList());
     }
 
     public Share findById(long id) {
         var shareEntity = sharesRepository.findById(id);
-        return shareEntity.map(this::transformEntity).orElse(null);
+        return shareEntity.map(sharesTransformer::transformEntity).orElse(null);
     }
 
     public Share create(ShareManipulationRequest request) {
         var sharesEntity = new SharesEntity(request.getWkn(), request.getName(), request.getStocksPrice(), request.isBuy());
         sharesEntity = sharesRepository.save(sharesEntity);
-        return transformEntity(sharesEntity);
+        return sharesTransformer.transformEntity(sharesEntity);
     }
 
     public Share update(long id, ShareManipulationRequest request) {
@@ -43,7 +46,7 @@ public class SharesService {
         shareEntity.setStocksPrice(request.getStocksPrice());
         shareEntity.setBuy(request.isBuy());
         shareEntity = sharesRepository.save(shareEntity);
-        return transformEntity(shareEntity);
+        return sharesTransformer.transformEntity(shareEntity);
     }
 
     public boolean deleteById(long id) {
@@ -52,10 +55,5 @@ public class SharesService {
         }
         sharesRepository.deleteById(id);
         return true;
-    }
-
-
-    private Share transformEntity(SharesEntity sharesEntity) {
-        return new Share(sharesEntity.getId(), sharesEntity.getWkn(), sharesEntity.getName(), sharesEntity.getStocksPrice(), sharesEntity.isBuy());
     }
 }

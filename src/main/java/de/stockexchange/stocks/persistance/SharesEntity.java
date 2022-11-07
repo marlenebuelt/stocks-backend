@@ -9,7 +9,7 @@ public class SharesEntity {
     @Id
     @Column(name = "id", nullable = false)
     private long id;
-    @Column(name = "wkn", nullable = false)
+    @Column(name = "wkn")
     private String wkn;
     @Column(name = "name")
     private String name;

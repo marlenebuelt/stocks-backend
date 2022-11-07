@@ -1,6 +1,6 @@
 package de.stockexchange.stocks.web;
 
-import de.stockexchange.stocks.SharesService;
+import de.stockexchange.stocks.service.SharesService;
 import de.stockexchange.stocks.web.api.Share;
 import de.stockexchange.stocks.web.api.ShareManipulationRequest;
 import org.springframework.http.ResponseEntity;
