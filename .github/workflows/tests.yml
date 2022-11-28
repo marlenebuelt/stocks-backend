@@ -1,6 +1,7 @@
 name: CI
 
 on: [ push ]
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -23,4 +24,4 @@ jobs:
       # Start your application here
       - run: greenframe analyze
         env:
-          - GREENFRAME_SECRET_TOKEN: ${{secrets.GREENFRAME_SECRET_TOKEN}}
+          GREENFRAME_SECRET_TOKEN: ${{secrets.GREENFRAME_SECRET_TOKEN}}
