@@ -1,7 +1,6 @@
 name: CI
 
 on: [ push ]
-baseURL: http://localhost:8080
 jobs:
   test:
     runs-on: ubuntu-latest
