@@ -4,7 +4,6 @@ on: [ push ]
 jobs:
   test:
     runs-on: ubuntu-latest
-    baseURL: http://localhost:8080
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 17
@@ -16,7 +15,6 @@ jobs:
         run: ./gradlew clean test --info --stacktrace
   greenframeci:
     runs-on: ubuntu-latest
-    baseURL: http://localhost:8080
     steps:
       - uses: actions/checkout@v3
         with:
