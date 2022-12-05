@@ -16,7 +16,7 @@ public class ShareManipulationRequest {
         this.buy = buy;
     }
 
-
+    public ShareManipulationRequest(){}
     public String getWkn() {
         return wkn;
     }
