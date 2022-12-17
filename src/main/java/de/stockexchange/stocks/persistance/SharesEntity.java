@@ -5,9 +5,10 @@ import java.math.BigDecimal;
 
 @Entity(name = "shares")
 public class SharesEntity {
-    //    Spalten in der Tabelle
+    //Spalten in der Tabelle
     @Id
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private long id;
     @Column(name = "wkn")
     private String wkn;

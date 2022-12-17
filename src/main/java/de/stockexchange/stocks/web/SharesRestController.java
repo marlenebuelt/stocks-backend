@@ -6,6 +6,7 @@ import de.stockexchange.stocks.web.api.ShareManipulationRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
@@ -27,7 +28,7 @@ public class SharesRestController {
     }
 
     @PostMapping(path = "/api/v1/shares")
-    public ResponseEntity<Void> createShare(@RequestBody ShareManipulationRequest request) throws URISyntaxException {
+    public ResponseEntity<Void> createShare(@Valid @RequestBody ShareManipulationRequest request) throws URISyntaxException {
         var share = sharesService.create(request);
         URI uri = new URI("/api/v1/shares/" + share.getId());
         return ResponseEntity.created(uri).build();
