@@ -2,6 +2,8 @@ package de.stockexchange.stocks.persistance;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity(name = "shares")
 public class SharesEntity {
@@ -18,6 +20,9 @@ public class SharesEntity {
     private BigDecimal stocksPrice;
     @Column(name = "buy")
     private boolean buy;
+
+    /*@OneToMany(mappedBy = "date", fetch = FetchType.EAGER)
+    private List<DateEntity> date = new ArrayList<>();*/
 
     public SharesEntity(String wkn, String name, BigDecimal stocksPrice, boolean buy) {
         this.wkn = wkn;
@@ -51,7 +56,6 @@ public class SharesEntity {
     public BigDecimal getStocksPrice() {
         return stocksPrice;
     }
-
     public void setStocksPrice(BigDecimal stocksPrice) {
         this.stocksPrice = stocksPrice;
     }
@@ -63,4 +67,12 @@ public class SharesEntity {
     public void setBuy(boolean buy) {
         this.buy = buy;
     }
+
+    /*public List<DateEntity> getDate() {
+        return date;
+    }
+
+    public void setDate(List<DateEntity> date) {
+        this.date = date;
+    }*/
 }

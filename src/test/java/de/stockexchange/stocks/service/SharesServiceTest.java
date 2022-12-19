@@ -10,16 +10,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.repository.query.FluentQuery;
 
 import java.math.BigDecimal;
-import java.util.List;
-import java.util.Optional;
-import java.util.function.Function;
 
 import static org.mockito.Mockito.*;
 
@@ -54,7 +46,7 @@ public class SharesServiceTest implements WithAssertions {
         verifyNoMoreInteractions(sharesRepository);
         assertThat(actual).isFalse();
     }
-    @Test
+/*    @Test
     @DisplayName("Checks if an item is returned correctly")
     void test_find_by_id() {
         var sharesEntity = Mockito.mock(SharesEntity.class);
@@ -65,5 +57,5 @@ public class SharesServiceTest implements WithAssertions {
         doReturn(true).when(sharesEntity).isBuy();
 
 
-    }
+    }*/
 }

@@ -10,11 +10,9 @@ public class ShareManipulationRequest {
     private String wkn;
     @NotBlank(message="Please add a value")
     private String name;
-    //@NotBlank(message="Please add a value")
     @Positive(message = "Value must be positive")
     private BigDecimal stocksPrice;
     private boolean buy;
-
 
     public ShareManipulationRequest(String wkn, String name, BigDecimal stocksPrice, boolean buy) {
         this.wkn = wkn;
