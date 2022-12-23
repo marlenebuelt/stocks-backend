@@ -15,7 +15,6 @@ public class ShareManipulationRequest {
     private BigDecimal stocksPrice;
     private boolean buy;
 
-
     public ShareManipulationRequest(String wkn, String name, BigDecimal stocksPrice, boolean buy) {
         this.wkn = wkn;
         this.name = name;
