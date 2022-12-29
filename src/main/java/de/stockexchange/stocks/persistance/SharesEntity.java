@@ -24,6 +24,9 @@ public class SharesEntity {
     /*@OneToMany(mappedBy = "date", fetch = FetchType.EAGER)
     private List<DateEntity> date = new ArrayList<>();*/
 
+    @OneToMany(mappedBy = "date", fetch = FetchType.EAGER)
+    private List<DateEntity> date = new ArrayList<>();*/
+
     public SharesEntity(String wkn, String name, BigDecimal stocksPrice, boolean buy) {
         this.wkn = wkn;
         this.name = name;
@@ -69,10 +72,13 @@ public class SharesEntity {
     }
 
     /*public List<DateEntity> getDate() {
+=======
+    public List<DateEntity> getDate() {
+>>>>>>> c023f955bd521f172914a86505573e12ac46655c
         return date;
     }
 
     public void setDate(List<DateEntity> date) {
         this.date = date;
+<<<<<<< HEAD
     }*/
-}
