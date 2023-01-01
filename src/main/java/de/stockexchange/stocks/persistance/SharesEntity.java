@@ -22,7 +22,7 @@ public class SharesEntity {
     private boolean buy;
 
     /*@OneToMany(mappedBy = "date", fetch = FetchType.EAGER)
-    private List<DateEntity> date = new ArrayList<>();*/
+    private List<DateEntity> date = new ArrayList<>();
 
     @OneToMany(mappedBy = "date", fetch = FetchType.EAGER)
     private List<DateEntity> date = new ArrayList<>();*/
@@ -34,7 +34,8 @@ public class SharesEntity {
         this.buy = buy;
     }
 
-    protected SharesEntity(){}
+    protected SharesEntity() {
+    }
 
     public long getId() {
         return id;
@@ -59,6 +60,7 @@ public class SharesEntity {
     public BigDecimal getStocksPrice() {
         return stocksPrice;
     }
+
     public void setStocksPrice(BigDecimal stocksPrice) {
         this.stocksPrice = stocksPrice;
     }
@@ -70,6 +72,7 @@ public class SharesEntity {
     public void setBuy(boolean buy) {
         this.buy = buy;
     }
+}
 
     /*public List<DateEntity> getDate() {
 =======
