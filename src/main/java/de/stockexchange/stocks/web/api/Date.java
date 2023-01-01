@@ -4,14 +4,12 @@ import java.time.LocalDate;
 
 public class Date {
     private Long dateId;
-    private LocalDate date;
-    private LocalDate dateLastChanged;
+    private String date;
     private Share share;
 
-public Date(Long id, LocalDate date, LocalDate dateChange, Share share){
+public Date(Long id, String date, Share share){
     this.dateId = id;
     this.date = date;
-    this.dateLastChanged = dateChange;
     this.share = share;
 }
 
@@ -23,20 +21,12 @@ public Date(Long id, LocalDate date, LocalDate dateChange, Share share){
         this.dateId = dateId;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
-    }
-
-    public LocalDate getDateChange() {
-        return dateLastChanged;
-    }
-
-    public void setDateChange(LocalDate dateChange) {
-        this.dateLastChanged = dateChange;
     }
 
     public Share getShare() {

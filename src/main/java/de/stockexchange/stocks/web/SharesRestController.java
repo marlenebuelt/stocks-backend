@@ -40,7 +40,7 @@ public class SharesRestController {
         return share != null? ResponseEntity.ok(share): ResponseEntity.notFound().build();
     }
     @DeleteMapping(path ="/api/v1/shares/{id}")
-    public ResponseEntity<Share> deleteShare(@PathVariable long id){
+    public ResponseEntity<Void> deleteShare(@PathVariable long id){
         boolean successful = sharesService.deleteById(id);
         return successful ? ResponseEntity.ok().build(): ResponseEntity.notFound().build();
     }

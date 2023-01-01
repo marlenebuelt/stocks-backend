@@ -11,18 +11,14 @@ public class DateEntity {
     private Long dateId;
 
     @Column(name="date")
-    private LocalDate date;
-
-    @Column
-    private LocalDate dateLastChanged;
+    private String date;
 
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "share_id", referencedColumnName = "id")
     private SharesEntity share;
 
-    public DateEntity(LocalDate date, LocalDate dateLastChanged, SharesEntity share) {
+    public DateEntity(String date, SharesEntity share) {
         this.date = date;
-        this.dateLastChanged = dateLastChanged;
         this.share = share;
     }
 
@@ -33,20 +29,12 @@ public class DateEntity {
         return dateId;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
-    }
-
-    public LocalDate getDateLastChanged() {
-        return dateLastChanged;
-    }
-
-    public void setDateLastChanged(LocalDate dateChange) {
-        this.dateLastChanged = dateChange;
     }
 
     public SharesEntity getShare() {

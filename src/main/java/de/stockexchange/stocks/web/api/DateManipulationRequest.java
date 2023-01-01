@@ -1,32 +1,20 @@
 package de.stockexchange.stocks.web.api;
-
-import java.time.LocalDate;
-
 public class DateManipulationRequest {
-    private LocalDate date;
-    private LocalDate dateLastChanged;
+    private String date;
     private Long shareId;
 
-public DateManipulationRequest(LocalDate dateId, LocalDate date, Long shareId){
-    this.date = dateId;
-    this.dateLastChanged = date;
+public DateManipulationRequest(String date, Long shareId){
+    this.date = date;
     this.shareId = shareId;
 }
+public DateManipulationRequest(){}
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
-    }
-
-    public LocalDate getDateLastChanged() {
-        return dateLastChanged;
-    }
-
-    public void setDateLastChanged(LocalDate dateLastChanged) {
-        this.dateLastChanged = dateLastChanged;
     }
 
     public Long getShareId() {
