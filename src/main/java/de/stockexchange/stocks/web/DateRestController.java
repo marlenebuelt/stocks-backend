@@ -26,8 +26,8 @@ public class DateRestController {
 
     @PostMapping(path="/api/v1/dates")
     public ResponseEntity<Void> createDate(@RequestBody DateManipulationRequest dmr) throws URISyntaxException{
-        Date date = dateService.create(dmr);
-        URI uri = new URI("/api/v1/dates"+date.getDateId());
+        var date = dateService.create(dmr);
+        URI uri = new URI("/api/v1/dates/"+date.getDateId());
         return ResponseEntity.created(uri).build();
     }
 }

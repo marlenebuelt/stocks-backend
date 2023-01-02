@@ -9,7 +9,6 @@ Ever been wondering what is the best time to buy or sell your shares, but didn't
 - Create an acount: Click on the Log in-page to register via Okta.
 - Log in via the Login page. Click on the Shares page to easily create shares just by adding the corresponding WKN, name, current price and whether you recommend buying or selling the specific share.
 - Not interested in buying a share anymore? Easily delete it by clicking the x.
-- Prices or recommendations have changed? Simply update prices and buying recommendations by clicking "update"
 - Whenever you are done, do not forget to log out.
 
 ## About the Project

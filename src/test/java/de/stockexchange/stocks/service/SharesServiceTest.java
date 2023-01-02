@@ -1,6 +1,5 @@
 package de.stockexchange.stocks.service;
 
-import de.stockexchange.stocks.persistance.SharesEntity;
 import de.stockexchange.stocks.persistance.SharesRepository;
 import org.assertj.core.api.WithAssertions;
 import org.junit.jupiter.api.DisplayName;
@@ -8,10 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-
-import java.math.BigDecimal;
 
 import static org.mockito.Mockito.*;
 

@@ -34,7 +34,10 @@ public class DateService {
         return transformEntity(dateEntity);
     }
 
-    public Date transformEntity(DateEntity dateEntity){
-        return new Date(dateEntity.getDateId(), dateEntity.getDate(), sharesTransformer.transformEntity(dateEntity.getShare()));
+    private Date transformEntity(DateEntity dateEntity){
+        return new Date(
+                dateEntity.getDateId(),
+                dateEntity.getDate(),
+                sharesTransformer.transformEntity(dateEntity.getShare()));
     }
 }
