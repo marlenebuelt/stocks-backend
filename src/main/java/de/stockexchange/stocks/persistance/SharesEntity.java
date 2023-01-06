@@ -73,15 +73,3 @@ public class SharesEntity {
         this.buy = buy;
     }
 }
-
-    /*public List<DateEntity> getDate() {
-=======
-    public List<DateEntity> getDate() {
->>>>>>> c023f955bd521f172914a86505573e12ac46655c
-        return date;
-    }
-
-    public void setDate(List<DateEntity> date) {
-        this.date = date;
-<<<<<<< HEAD
-    }*/

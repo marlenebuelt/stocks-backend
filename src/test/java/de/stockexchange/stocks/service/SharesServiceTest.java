@@ -42,16 +42,4 @@ public class SharesServiceTest implements WithAssertions {
         verifyNoMoreInteractions(sharesRepository);
         assertThat(actual).isFalse();
     }
-/*    @Test
-    @DisplayName("Checks if an item is returned correctly")
-    void test_find_by_id() {
-        var sharesEntity = Mockito.mock(SharesEntity.class);
-        doReturn(1L).when(sharesEntity).getId();
-        doReturn("Apple").when(sharesEntity).getName();
-        doReturn(BigDecimal.valueOf(100.50)).when(sharesEntity).getStocksPrice();
-        doReturn("123456").when(sharesEntity).getWkn();
-        doReturn(true).when(sharesEntity).isBuy();
-
-
-    }*/
 }

@@ -8,7 +8,6 @@ import org.mockito.Mockito;
 
 import java.math.BigDecimal;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.Mockito.doReturn;
 
 public class SharesTransformerTest implements WithAssertions {
