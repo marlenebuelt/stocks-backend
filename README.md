@@ -9,7 +9,9 @@ Ever been wondering what is the best time to buy or sell your shares, but didn't
 - Create an acount: Click on the Log in-page to register via Okta.
 - Log in via the Login page. Click on the Shares page to easily create shares just by adding the corresponding WKN, name, current price and whether you recommend buying or selling the specific share.
 - Not interested in buying a share anymore? Easily delete it by clicking the x.
+- Changed your mind about a share or the price has changed? Update those values by clicking the update button.
 - Whenever you are done, do not forget to log out.
 
 ## About the Project
-This app has been developed by Marlene Bültemann as part of the webtchnologies class at HTW Berlin between October 10th, 2022 and January 8th, 2023.
+This app has been developed by Marlene Bültemann as part of the webtechnologies class at HTW Berlin between October 10th, 2022 and January 8th, 2023.
+Link to frontend-repository: https://github.com/marlenebuelt/stocks-frontend
